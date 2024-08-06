@@ -70,6 +70,7 @@ class Commit(object):
 	def __init__(self, string):
 		self.filediffs = []
 		commit_line = string.split("|")
+		self.timestamp = ""
 
 		if commit_line.__len__() == 5:
 			self.timestamp = commit_line[0]
