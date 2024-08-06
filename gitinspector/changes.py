@@ -147,7 +147,7 @@ class ChangesThread(threading.Thread):
 				self.changes.emails_by_author[author] = email
 				self.changes.authors_by_email[email] = author
 
-			if Commit.is_commit_line(j) or i is lines[-1]:
+			if Commit.is_commit_line(j):
 				if found_valid_extension:
 					bisect.insort(commits, commit)
 
